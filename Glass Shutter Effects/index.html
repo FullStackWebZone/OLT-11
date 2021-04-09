@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="style.css">
+	
+	</head>
+	<body>
+		<section>
+			<div>
+				<h2 id="rangeValue">0</h2>
+				<div id="fillRangeTopLeft"></div>
+				<div id="fillRangeTopRight"></div>
+				<div id="fillRangeBottomLeft"></div>
+				<div id="fillRangeBottomRight"></div>
+				<input type="range" class="range" value="0" min="0" max="100" onmousemove="rangeSlider(this.value)" onchange = "rangeSlider(this.value)">
+			</div>
+		</section>
+		<script type="text/javascript">
+			function rangeSlider(value){
+				document.getElementById('rangeValue').innerHTML = value;
+
+				document.getElementById('fillRangeTopLeft').style.width = +value/2+'%';
+
+				document.getElementById('fillRangeTopRight').style.height = +value/2+'%';
+
+				document.getElementById('fillRangeBottomLeft').style.height = +value/2+'%';
+
+				document.getElementById('fillRangeBottomRight').style.width = +value/2+'%';
+			}
+		</script>
+	</body>
+</html>

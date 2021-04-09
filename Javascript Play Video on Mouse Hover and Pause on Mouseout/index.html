@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="style.css">
+	
+	</head>
+	<body>
+		<div class="container">
+			<div class="box">
+				<video src="vid.mp4" type="video/mp4" loop class="clip" muted></video>
+			</div>
+			<div class="box">
+				<video src="vid.mp4" type="video/mp4" loop class="clip" muted></video>
+			</div>
+			<div class="box">
+				<video src="vid.mp4" type="video/mp4" loop class="clip" muted></video>
+			</div>
+			<div class="box">
+				<video src="vid.mp4" type="video/mp4" loop class="clip" muted></video>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			const clip = document.querySelectorAll(".clip");
+			for(let i = 0; i<clip.length; i++){
+				clip[i].addEventListener('mouseenter', function(e){
+					clip[i].play()
+				})
+				clip[i].addEventListener('mouseout', function(e){
+					clip[i].pause()
+				})
+			}
+		</script>
+	</body>
+</html>

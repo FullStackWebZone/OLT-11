@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="style.css">
+	
+	</head>
+	<body>
+		<nav>
+	<a href="#">Features</a>
+	<a href="#">PressKit</a>
+	<a href="#">Download</a>
+</nav>
+		<script type="text/javascript">
+			"use strict";
+
+document.querySelectorAll('a').forEach(elem => {
+  elem.onmouseenter = elem.onmouseleave = e => {
+    const tolerance = 10;
+    const left = 0;
+    const right = elem.clientWidth;
+    let x = e.pageX - elem.offsetLeft;
+    if (x - tolerance < left) x = left;
+    if (x + tolerance > right) x = right;
+    elem.style.setProperty('--x', `${x}px`);
+  };
+});
+		</script>
+	</body>
+</html>
